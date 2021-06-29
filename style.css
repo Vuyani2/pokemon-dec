@@ -1,0 +1,157 @@
+body {
+  margin: 300px;
+  padding: 40px;
+  background-image: url(./pokemon.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+}
+
+.ball-container {
+  overflow: hidden;
+  width: 60px;
+  height: 60px;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: relative;
+  animation: shake 1.5s ease-in infinite;
+  animation-play-state: paused;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(5deg);
+  }
+  5% {
+    transform: rotate(-5deg);
+  }
+  10% {
+    transform: rotate(5deg);
+  }
+  15% {
+    transform: rotate(-5deg);
+  }
+  20% {
+    transform: rotate(5deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.ball-container:hover {
+  cursor: pointer;
+  animation-play-state: running;
+}
+.upper-half-ball {
+  position: absolute;
+  width: 100%;
+  height: 42%;
+  background-color: red;
+}
+
+.bottom-half-ball {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 42%;
+  background-color: white;
+}
+
+.center-ball {
+  background-color: white;
+  width: 20%;
+  height: 20%;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center-line {
+  background: black;
+  height: 100%;
+  width: 100%;
+}
+input {
+  text-align: center;
+  height: 40px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+.screen-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen {
+  width: 150px;
+  height: 150px;
+  border: solid black;
+  border-radius: 0 0 0 17%;
+  display: grid;
+  grid-template-rows: 10% 72% 18%;
+  background-color: white;
+}
+
+.top-screen-lights {
+  width: 50%;
+  margin-top: 2px;
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.mini-light {
+  border: solid black 1px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin-right: 7px;
+}
+
+#main-screen {
+  height: 100%;
+  width: 80%;
+  justify-self: center;
+  background-color: var(--main-screen-bg-color);
+  border: solid black 2px;
+  border-radius: 5%;
+  background-image: url(https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.line {
+  width: 18px;
+  height: 2px;
+  background-color: black;
+  margin-top: 2px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  padding-left: 60px;
+}
+.buttons-container {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+#right-panel {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
